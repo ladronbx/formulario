@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <title>Registro de Usuarios</title>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 16px;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="w-96 bg-white rounded-lg shadow-md p-6 mx-auto mt-10">
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Registro de Usuario</h2>
+
+        <form action="http://localhost:8000/api/register" method="POST" class="flex flex-col" id="registrationForm">
+
+            <input type="text" id="name" name="name" placeholder="Nombre"
+                class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                required>
+            <div class="error-message" id="name-error"></div>
+
+            <input type="text" id="last_name" name="last_name" placeholder="Apellidos"
+                class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                required>
+            <div class="error-message" id="last_name-error"></div>
+
+            <input type="email" id="email" name="email" placeholder="E-mail"
+                class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                required>
+            <div class="error-message" id="email-error"></div>
+
+            <input type="tel" id="phone" name="phone" placeholder="Teléfono"
+                class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                required>
+            <div class="error-message" id="phone-error"></div>
+
+            <input type="text" id="postal_code" name="postal_code" placeholder="Código Postal"
+                class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                pattern="[0-9]{5}" title="Introduce un código postal válido de 5 dígitos" required>
+            <div class="error-message" id="postal_code-error"></div>
+
+            <div>
+                <input type="checkbox" id="privacy_policy_accepted" name="privacy_policy_accepted" value="true"
+                    class="mb-4" required>
+                <label for="privacy_policy_accepted" class="text-sm text-gray-600">Acepto las políticas de
+                    privacidad</label>
+                <div class="error-message" id="privacy_policy_accepted-error"></div>
+            </div>
+
+            <button type="button"
+                class="registrar bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
+                onclick="validateForm()">Registrar</button>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

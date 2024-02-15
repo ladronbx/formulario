@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Finansi",
+    "dateExported": "2024-02-15T18:06:19.912Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "67fb3b4a-ee33-4ced-8bf2-b61af432d4da",
+            "colId": "979865df-0215-42b2-b6d3-25a8853942f4",
+            "containerId": "",
+            "name": "Register",
+            "url": "http://localhost:8000/api/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-15T14:52:42.348Z",
+            "modified": "2024-02-15T17:05:15.345Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Jane\",\n    \"last_name\": \"Doe\",\n    \"email\": \"jane@example.com\",\n    \"phone\": \"123456789\",\n    \"postal_code\": \"28008\",\n    \"privacy_policy_accepted\": true\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
